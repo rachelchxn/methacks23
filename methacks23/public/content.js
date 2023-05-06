@@ -1,5 +1,12 @@
 alert('Hello world from content.js');
 
+function blurText() {
+  const phrases = document.getElementsByTagName("p", "h1", "h2");
+  for (let i = 0; i < images.length; i++) {
+    const phrase = phrases[i];
+  }
+}
+
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
@@ -54,5 +61,11 @@ function init() {
 }
   
   // Wait for the page to load
+  document.addEventListener('DOMContentLoaded', function() {
+    var style = document.createElement('style');
+    style.textContent = 'body * { filter: blur(4px); }';
+    document.head.appendChild(style);
+  });
+  
   window.addEventListener("load", init);
   
