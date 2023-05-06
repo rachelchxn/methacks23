@@ -99,11 +99,11 @@ function init() {
 }
   
   // Wait for the page to load
+  
+document.body.style.filter = "blur(5px)";
+
   document.addEventListener('DOMContentLoaded', function() {
     var style = document.createElement('style');
     style.textContent = 'body * { filter: blur(4px); }';
     document.head.appendChild(style);
   });
-  
-  window.addEventListener("load", init);
-  
