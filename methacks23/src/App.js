@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { Popup } from './Popup';
 import { useState, useEffect, useRef } from 'react';
 import * as mobilenet from "@tensorflow-models/mobilenet";
+import './App.css'
 
 // THIS IS JUST DATA FOR THE COHERE API
 const options = {
@@ -60,6 +61,7 @@ function App() {
   const [model, setModel] = useState(null)
   const imageRef = useRef()
   const [results, setResults] = useState([])
+  const [visible, setVisible] = useState(true)
 
   const loadModel = async () => {
     setIsModelLoading(true)
@@ -77,7 +79,19 @@ function App() {
     console.log('hello')
     const result = await model.classify(imageRef.current)
     setResults(result)
-    console.log(results)
+    let includesObj = false;
+    for (let i = 0; i < results.length; i++) {
+      const result = results[i];
+      if (result.className.includes("jersey")) {
+        includesObj = true;
+        break;
+      }
+    }
+    if (includesObj) {
+      setVisible(true)
+    } else {
+      setVisible(false)
+    }
 }
 
   useEffect(() => {
@@ -103,7 +117,7 @@ function App() {
       <header className="App-header">
 
         <img src={logo} className="App-logo" alt="logo" />
-        <img onClick={identify} src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt='' ref={imageRef} crossOrigin='anonymous'/>
+        <img className={!visible && 'blur'} onClick={identify} src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt='' ref={imageRef} crossOrigin='anonymous'/>
         {/* <img  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt=''  crossOrigin='anonymous'/> */}
       </header>
     </div>
