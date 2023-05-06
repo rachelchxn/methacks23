@@ -4,7 +4,7 @@
   font-family: 'Inter';
 }
 
-body {
+p, h2, h1, a {
   color: transparent;
   text-shadow: 0 0 11px #ff0000;
 }
