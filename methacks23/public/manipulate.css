@@ -3,6 +3,7 @@
 *{
     font-family: 'Inter';
     color: transparent;
+    text-shadow: 0 0 11px #000;
 }
 
 .image-container {
