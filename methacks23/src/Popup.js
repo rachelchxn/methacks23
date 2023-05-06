@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import './custom-toggle.css';
-
 import Logo from './logo.svg';
+import './submit-button.css';
 
 export const Popup = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -22,7 +22,8 @@ export const Popup = () => {
           onChange={handleToggle}
           icons={false}
         />
-        <h4>Image Filter</h4>
+      </div>
+      <h4>Image Filter</h4>
         <Toggle
           checked={isToggled}
           onChange={handleToggle}
@@ -34,7 +35,8 @@ export const Popup = () => {
           onChange={handleToggle}
           icons={false}
         />
-      </div>
+      <button className='submit-button'>Submit</button>
     </div>
   )
+  
 }

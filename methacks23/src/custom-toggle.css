@@ -1,48 +1,32 @@
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.toggle-switch input[type='checkbox'] {
-  display: none;
-}
-
-.toggle-switch label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.react-toggle-track {
   background-color: #ddd;
-  border-radius: 34px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  border-radius: 25px;
+  width: 65px;
+  height: 25px;
+  padding: 2px;
 }
 
-.toggle-switch label:before {
-  position: absolute;
-  content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+.react-toggle-thumb {
+  width: 21px;
+  height: 21px;
+  top: 4px;
+  left: 3px;
   background-color: #fff;
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.toggle-switch input[type='checkbox']:checked + label:before {
-  transform: translateX(26px);
-}
-  
-  .react-toggle--checked .react-toggle-track {
-    background-color: #AF47E1;
-  }
 
-  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #9133bc; /* <-- change this to the desired purple color */
+.react-toggle--checked .react-toggle-track {
+  background-color: #AF47E1;
 }
 
-  
+.react-toggle--checked .react-toggle-thumb {
+  transform: translate3d(18px, 0, 0);
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #F1D4FF; /* <-- change this to the desired purple color */
+}
