@@ -22,6 +22,18 @@ export const Popup = () => {
           onChange={handleToggle}
           icons={false}
         />
+        <h4>Image Filter</h4>
+        <Toggle
+          checked={isToggled}
+          onChange={handleToggle}
+          icons={false}
+        />
+        <h4>Text Filter</h4>
+        <Toggle
+          checked={isToggled}
+          onChange={handleToggle}
+          icons={false}
+        />
       </div>
     </div>
   )

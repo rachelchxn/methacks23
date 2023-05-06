@@ -1,9 +1,11 @@
+
+
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
-  
+
       // Wrap the image with a container div
       const imageContainer = document.createElement("div");
       imageContainer.className = "image-container";
@@ -39,23 +41,16 @@ function showImage(imageContainer) {
   overlay.remove();
 }
 
-// bool -> bool
-function toggle(item) {
-  item = !item; // if true, it becomes false. vice versa.
-}
-
-
 // Entry point
 function init() {
-  let text_filter = false;
-  let text_filter_neutralize = false; // USES GENERATE
-  let text_filter_block = false;
-  let image_filter = true;
+  //let text_filter = false;
+  //let text_filter_neutralize = false; // USES GENERATE
+  //let text_filter_block = false;
+  //let image_filter = true;
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
-  if (image_filter) {
-    blurImagesAndAddOverlay();
-  }
+  blurImagesAndAddOverlay();
+
   
 }
   
