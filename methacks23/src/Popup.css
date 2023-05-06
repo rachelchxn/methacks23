@@ -4,6 +4,8 @@
     font-family: 'Inter';
 }
 
+/* SUBMIT/RESET BUTTONS */
+
 /* submit button */
 .submit-button {
   display: flex;
@@ -74,3 +76,55 @@
   justify-content: center;
   align-items: center;
 }
+
+/* TOGGLE BUTTON */
+.react-toggle-track {
+    background-color: #ddd;
+    border-radius: 25px;
+    width: 65px;
+    height: 25px;
+    padding: 2px;
+  }
+  
+  .react-toggle-thumb {
+    width: 21px;
+    height: 21px;
+    top: 4px;
+    left: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .react-toggle--checked .react-toggle-track {
+    background-color: #AF47E1;
+  }
+  
+  .react-toggle--checked .react-toggle-thumb {
+    transform: translate3d(18px, 0, 0);
+  }
+  
+  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: #F1D4FF; /* <-- change this to the desired purple color */
+  }
+  
+  /* INSERT TEXT BOX */
+  .insert-text-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 15px;
+    gap: 10px;
+    width: 564px;
+    height: 41px;
+    background: #F2F1FC;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
