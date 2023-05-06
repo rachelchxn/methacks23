@@ -72,8 +72,6 @@ function blurImagesAndAddOverlay() {
         image.style.filter = "blur(8px)";
 
       }
-
-      
     }
   }
   
@@ -94,9 +92,9 @@ function init() {
   //let image_filter = true;
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
-  document.body.style.filter = "blur(5px)";
-  blurImagesAndAddOverlay();
 
+  blurImagesAndAddOverlay();
+  document.body.style.filter = "blur(5px)";
 }
   
   // Wait for the page to load
