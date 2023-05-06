@@ -95,15 +95,10 @@ function init() {
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
   blurImagesAndAddOverlay();
-  
+  document.body.style.filter = "blur(5px)";
+
 }
   
   // Wait for the page to load
   
-document.body.style.filter = "blur(5px)";
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var style = document.createElement('style');
-    style.textContent = 'body * { filter: blur(4px); }';
-    document.head.appendChild(style);
-  });
+  window.addEventListener("load", init);
