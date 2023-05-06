@@ -4,7 +4,7 @@
   font-family: 'Inter';
 }
 
-p* {
+body {
   color: transparent;
   text-shadow: 0 0 11px #ff0000;
 }
