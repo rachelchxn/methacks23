@@ -12,6 +12,14 @@ export const Popup = () => {
     setIsToggled(!isToggled);
   }
 
+  const handleSubmit = () => {
+    // Handle form submission logic here
+  }
+
+  const handleReset = () => {
+    // Handle form reset logic here
+  }
+
   return (
     <div>
       <div className='header'>
@@ -35,7 +43,13 @@ export const Popup = () => {
           onChange={handleToggle}
           icons={false}
         />
-      <button className='submit-button'>Submit</button>
+      <div className='form'>
+        {/* Submit button */}
+        <button className='submit-button' onClick={handleSubmit}>Submit</button>
+        
+        {/* Reset button */}
+        <button className='reset-button' onClick={handleReset}>Reset</button>
+      </div>
     </div>
   )
   

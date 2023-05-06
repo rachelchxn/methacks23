@@ -1,60 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    font-family: 'Inter';
+}
+
+/* submit button */
 .submit-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px 20px;
-    gap: 10px;
-  
-    width: 272px;
-    height: 41px;
-  
-    background: #F2F1FC;
-    border-radius: 5px;
-    border: 1px solid #ffffff;
-  
-    flex: none;
-    order: 1;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
 
-    color: #000000;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+  width: 272px;
+  height: 41px;
+
+  background: #AF47E1;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+
+  color: #FFFFFF;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
 }
 
 .submit-button:hover {
-  background: #AF47E1;
+  background: #973ac2;
   color: #FFFFFF;
-  border: 1px solid #973ac2;
-  }
-
-  /* reset button */
-  .submit-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px 20px;
-    gap: 10px;
-  
-    width: 272px;
-    height: 41px;
-  
-    background: #F2F1FC;
-    border-radius: 5px;
-    border: 1px solid #ffffff;
-  
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-
-    color: #000000;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+  border: 0px solid #973ac2;
 }
 
-.submit-button:hover {
-  background: #AF47E1;
-  color: #FFFFFF;
-  border: 1px solid #973ac2;
-  }
+/* reset button */
+.reset-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+
+  width: 272px;
+  height: 41px;
+
+  background: #F2F1FC;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+
+  color: #000000;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+
+.reset-button:hover {
+  background: #EFE6FC;
+  color: #000000;
+  border: 0px solid #EFE6FC;
+}
+
+/* Form container */
+.form {
+  /* Add flexbox layout properties */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
