@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
-import './custom-toggle.css';
 import Logo from './logo.svg';
-import './submit-button.css';
+import './Popup.css';
 
 export const Popup = () => {
   const [isToggled, setIsToggled] = useState(false);
