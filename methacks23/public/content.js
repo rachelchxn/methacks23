@@ -1,43 +1,64 @@
-function blurImages() {
+// Blur images and add overlay
+function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
     for (let i = 0; i < images.length; i++) {
-      images[i].style.filter = "blur(8px)";
+      const image = images[i];
+  
+      // Wrap the image with a container div
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "image-container";
+      image.parentNode.insertBefore(imageContainer, image);
+      imageContainer.appendChild(image);
+  
+      // Create the overlay elements
+      const overlay = document.createElement("div");
+      overlay.className = "overlay";
+  
+      const text = document.createElement("p");
+      text.innerText = "Hidden by ZenSphere.";
+      overlay.appendChild(text);
+  
+      const button = document.createElement("button");
+      button.innerText = "Show Anyway";
+      button.addEventListener("click", showImage.bind(null, imageContainer));
+      overlay.appendChild(button);
+  
+      imageContainer.appendChild(overlay);
+  
+      // Blur the image
+      image.style.filter = "blur(8px)";
     }
   }
   
-  // Create overlay elements
-  function createOverlay() {
-    const overlay = document.createElement("div");
-    overlay.className = "overlay";
+  // Show image and remove overlay
+function showImage(imageContainer) {
+  const image = imageContainer.querySelector("img");
+  image.style.filter = "none";
   
-    const text = document.createElement("p");
-    text.innerText = "Hidden by ZenSphere";
-    overlay.appendChild(text);
+  const overlay = imageContainer.querySelector(".overlay");
+  overlay.remove();
+}
+
+// bool -> bool
+function toggle(item) {
+  item = !item; // if true, it becomes false. vice versa.
+}
+
+
+// Entry point
+function init() {
+  let text_filter = false;
+  let text_filter_neutralize = false; // USES GENERATE
+  let text_filter_block = false;
+  let image_filter = true;
   
-    const button = document.createElement("button");
-    button.innerText = "Show Anyway";
-    button.addEventListener("click", showImages);
-    overlay.appendChild(button);
-  
-    document.body.appendChild(overlay);
+  // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
+  if (image_filter) {
+    blurImagesAndAddOverlay();
   }
   
-  // Show images and remove overlay
-  function showImages() {
-    const images = document.getElementsByTagName("img");
-    for (let i = 0; i < images.length; i++) {
-      images[i].style.filter = "none";
-    }
-  
-    const overlay = document.querySelector(".overlay");
-    overlay.remove();
-  }
-  
-  // Entry point
-  function init() {
-    blurImages();
-    createOverlay();
-  }
+}
   
   // Wait for the page to load
   window.addEventListener("load", init);
+  

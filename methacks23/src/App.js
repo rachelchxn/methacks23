@@ -41,11 +41,24 @@ const options = {
   })
 };
 
+let text_filter = false;
+let text_filter_neutralize = false; // USES GENERATE
+let text_filter_block = false;
+//let image_filter = false; UNCOMMENT WHEN USED
+
+if (text_filter == true) {
+  text_filter_neutralize = true;
+  if (text_filter_block == true) {
+    text_filter_neutralize = false;
+  }
+}
+
 function App() {
 
   useEffect(() => {
 
     async function runCohereApi() {
+      
       // I STOLE THIS FROM THE COHERE API. USING THE FETCH VERSION OF THEIR EXAMPLE CODE
       const data = await fetch('https://api.cohere.ai/v1/classify', options)
       .then(response => response.json())
