@@ -46,12 +46,6 @@ let text_filter_neutralize = false; // USES GENERATE
 let text_filter_block = false;
 //let image_filter = false; UNCOMMENT WHEN USED
 
-if (text_filter == true) {
-  text_filter_neutralize = true;
-  if (text_filter_block == true) {
-    text_filter_neutralize = false;
-  }
-}
 
 function App() {
 

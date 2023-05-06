@@ -50,7 +50,6 @@ function init() {
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
   blurImagesAndAddOverlay();
-
   
 }
   
