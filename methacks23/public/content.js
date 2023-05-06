@@ -1,41 +1,79 @@
-alert('Hello world from content.js');
+import * as mobilenet from "@tensorflow-models/mobilenet";
 
-function blurText() {
-  const phrases = document.getElementsByTagName("p", "h1", "h2");
-  for (let i = 0; i < images.length; i++) {
-    const phrase = phrases[i];
+let isModelLoading = false;
+let model = null;
+let results = [];
+let visible = true;
+const imageRef = document.createElement('img');
+
+const loadModel = async () => {
+  isModelLoading = true;
+  try {
+    model = await mobilenet.load();
+    isModelLoading = false;
+  } catch (error) {
+    console.log(error);
+    isModelLoading = false;
   }
-}
+};
 
+const identify = async (imageRef) => {
+  const result = await model.classify(imageRef);
+  results = result;
+  let includesObj = false;
+  for (let i = 0; i < results.length; i++) {
+    const result = results[i];
+    if (result.className.includes('jersey')) {
+      includesObj = true;
+      break;
+    }
+  }
+  if (includesObj) {
+    return(false)
+  } else {
+    return(true)
+  }
+};
+
+// Usage:
+loadModel();
+identify();
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
 
-      // Wrap the image with a container div
-      const imageContainer = document.createElement("div");
-      imageContainer.className = "image-container";
-      image.parentNode.insertBefore(imageContainer, image);
-      imageContainer.appendChild(image);
-  
-      // Create the overlay elements
-      const overlay = document.createElement("div");
-      overlay.className = "overlay";
-  
-      const text = document.createElement("p");
-      text.innerText = "Hidden by ZenSphere.";
-      overlay.appendChild(text);
-  
-      const button = document.createElement("button");
-      button.innerText = "Show Anyway";
-      button.addEventListener("click", showImage.bind(null, imageContainer));
-      overlay.appendChild(button);
-  
-      imageContainer.appendChild(overlay);
-  
-      // Blur the image
-      image.style.filter = "blur(8px)";
+      let show = identify(image)
+
+      if(!show) {
+        // Wrap the image with a container div
+        const imageContainer = document.createElement("div");
+        imageContainer.className = "image-container";
+        image.parentNode.insertBefore(imageContainer, image);
+        imageContainer.appendChild(image);
+    
+        // Create the overlay elements
+        const overlay = document.createElement("div");
+        overlay.className = "overlay";
+    
+        const text = document.createElement("p");
+        text.innerText = "Hidden by ZenSphere.";
+        overlay.appendChild(text);
+    
+        const button = document.createElement("button");
+        button.innerText = "Show Anyway";
+        button.addEventListener("click", showImage.bind(null, imageContainer));
+        overlay.appendChild(button);
+    
+        imageContainer.appendChild(overlay);
+    
+        // Blur the image
+        image.style.filter = "blur(8px)";
+
+      }
+
+      
     }
   }
   
