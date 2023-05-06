@@ -5,7 +5,7 @@
 }
 
 body {
-  color: transparent;
+  opacity: 0;
   text-shadow: 0 0 11px #000;
 }
 
