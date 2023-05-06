@@ -31,18 +31,33 @@ function blurImagesAndAddOverlay() {
   }
   
   // Show image and remove overlay
-  function showImage(imageContainer) {
-    const image = imageContainer.querySelector("img");
-    image.style.filter = "none";
+function showImage(imageContainer) {
+  const image = imageContainer.querySelector("img");
+  image.style.filter = "none";
   
-    const overlay = imageContainer.querySelector(".overlay");
-    overlay.remove();
-  }
+  const overlay = imageContainer.querySelector(".overlay");
+  overlay.remove();
+}
+
+// bool -> bool
+function toggle(item) {
+  item = !item; // if true, it becomes false. vice versa.
+}
+
+
+// Entry point
+function init() {
+  let text_filter = false;
+  let text_filter_neutralize = false; // USES GENERATE
+  let text_filter_block = false;
+  let image_filter = true;
   
-  // Entry point
-  function init() {
+  // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
+  if (image_filter) {
     blurImagesAndAddOverlay();
   }
+  
+}
   
   // Wait for the page to load
   window.addEventListener("load", init);
