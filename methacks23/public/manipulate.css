@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 *{
-    font-family: 'Inter';
-    color: transparent;
-    text-shadow: 0 0 11px #000;
+  font-family: 'Inter';
+}
+
+body {
+  color: transparent;
+  text-shadow: 0 0 11px #000;
 }
 
 .image-container {
-    position: relative;
-    display: inline-block;
-  }
+  position: relative;
+  display: inline-block;
+}
   
 .overlay {
   position: absolute;
