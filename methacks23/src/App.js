@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
 import { Popup } from './Popup';
+import { useState, useEffect, useRef } from 'react';
+import * as mobilenet from "@tensorflow-models/mobilenet";
 
 // THIS IS JUST DATA FOR THE COHERE API
 const options = {
@@ -49,6 +49,31 @@ let text_filter_block = false;
 
 function App() {
 
+  // Load Model
+  const [isModelLoading, setIsModelLoading] = useState(false)
+  const [model, setModel] = useState(null)
+  const imageRef = useRef()
+  const [results, setResults] = useState([])
+
+  const loadModel = async () => {
+    setIsModelLoading(true)
+    try {
+      const model = await mobilenet.load()
+      setModel(model)
+      setIsModelLoading(false)
+    } catch (error) {
+      console.log(error)
+      setIsModelLoading(false)
+    }
+  }
+
+  const identify = async () => {
+    console.log('hello')
+    const result = await model.classify(imageRef.current)
+    setResults(result)
+    console.log(results)
+}
+
   useEffect(() => {
 
     async function runCohereApi() {
@@ -63,11 +88,18 @@ function App() {
     }
 
     runCohereApi();
+    loadModel()
   }, []);
 
   return (
     <div className="App">
       <Popup/>
+      <header className="App-header">
+
+        <img src={logo} className="App-logo" alt="logo" />
+        <img onClick={identify} src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt='' ref={imageRef} crossOrigin='anonymous'/>
+        {/* <img  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt=''  crossOrigin='anonymous'/> */}
+      </header>
     </div>
   );
 }
