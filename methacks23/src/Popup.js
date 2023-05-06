@@ -4,7 +4,7 @@ import 'react-toggle/style.css';
 import Logo from './logo.svg';
 import './Popup.css';
 
-export const Popup = () => {
+function Popup() {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
@@ -53,3 +53,5 @@ export const Popup = () => {
   )
   
 }
+
+export {Popup};
