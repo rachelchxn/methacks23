@@ -1,4 +1,4 @@
-
+alert('Hello world from content.js');
 
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
