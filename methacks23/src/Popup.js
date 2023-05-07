@@ -95,11 +95,16 @@ export const Popup = () => {
           icons={false}
         />
         </div>
-        <form style={divStyle}>
-          <input type="radio" name="choice" value="Scripting"></input>
+        <form className='multi-div' >
+          <div>
+          <input className='multichoice' type="radio" name="choice" value="Scripting" disabled={!isToggledText}></input>
           <p className="options">Neutralize</p>
-          <input type="radio" name="choice" value="Scripting"></input>
+          </div>
+
+          <div>
+          <input className='multichoice' type="radio" name="choice" value="Scripting" disabled={!isToggledText}></input>
           <p className="options">Blur</p>
+          </div>
         </form>
     </div>
   )
