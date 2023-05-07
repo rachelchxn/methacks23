@@ -1,39 +1,39 @@
-import * as mobilenet from "../node_modules/@tensorflow-models/mobilenet";
+// import * as mobilenet from "../node_modules/@tensorflow-models/mobilenet";
 
-let isModelLoading = false;
-let model = null;
-let results = [];
-let visible = true;
-const imageRef = document.createElement('img');
+// let isModelLoading = false;
+// let model = null;
+// let results = [];
+// let visible = true;
+// const imageRef = document.createElement('img');
 
-const loadModel = async () => {
-  isModelLoading = true;
-  try {
-    model = await mobilenet.load();
-    isModelLoading = false;
-  } catch (error) {
-    console.log(error);
-    isModelLoading = false;
-  }
-};
+// const loadModel = async () => {
+//   isModelLoading = true;
+//   try {
+//     model = await mobilenet.load();
+//     isModelLoading = false;
+//   } catch (error) {
+//     console.log(error);
+//     isModelLoading = false;
+//   }
+// };
 
-const identify = async (imageRef) => {
-  const result = await model.classify(imageRef);
-  results = result;
-  let includesObj = false;
-  for (let i = 0; i < results.length; i++) {
-    const result = results[i];
-    if (result.className.includes('jersey')) {
-      includesObj = true;
-      break;
-    }
-  }
-  if (includesObj) {
-    return(false)
-  } else {
-    return(true)
-  }
-};
+// const identify = async (imageRef) => {
+//   const result = await model.classify(imageRef);
+//   results = result;
+//   let includesObj = false;
+//   for (let i = 0; i < results.length; i++) {
+//     const result = results[i];
+//     if (result.className.includes('jersey')) {
+//       includesObj = true;
+//       break;
+//     }
+//   }
+//   if (includesObj) {
+//     return(false)
+//   } else {
+//     return(true)
+//   }
+// };
 
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
@@ -41,9 +41,9 @@ function blurImagesAndAddOverlay() {
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
 
-      let show = identify(image)
+      // let show = identify(image)
 
-      if(!show) {
+      // if(!show) {
         // Wrap the image with a container div
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
@@ -68,7 +68,7 @@ function blurImagesAndAddOverlay() {
         // Blur the image
         image.style.filter = "blur(8px)";
 
-      }
+      // }
     }
   }
   
@@ -89,7 +89,7 @@ function init() {
   //let image_filter = true;
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
-  loadModel();
+  // loadModel();
   blurImagesAndAddOverlay();
   // document.body.style.filter = "blur(5px)";
 }
