@@ -36,8 +36,12 @@ export const Popup = () => {
     setInputValue(event.target.value);
   }
 
+  const divStyle = {
+    display: 'flex'
+  }
+
   return (
-    <div>
+    <div className="everything">
       <div className='header'>
         <img src={Logo} alt="Logo"/>
         <h3>ZenSphere</h3>
@@ -87,6 +91,12 @@ export const Popup = () => {
           icons={false}
         />
         </div>
+        <form style={divStyle}>
+          <input type="radio" name="choice" value="Scripting"></input>
+          <p className="options">Neutralize</p>
+          <input type="radio" name="choice" value="Scripting"></input>
+          <p className="options">Blur</p>
+        </form>
     </div>
   )
 }

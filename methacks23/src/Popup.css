@@ -4,6 +4,10 @@
   font-family: 'Inter';
 }
 
+.everything {
+  padding: 50px;
+}
+
 /* TOGGLE BUTTON */
 .react-toggle-track {
   background-color: #ddd;
@@ -204,4 +208,12 @@ input:focus {
 /* stylish */
 h5 {
     margin-bottom: 0px;
+}
+
+form {
+  display: inline-block;
+}
+
+p.options {
+  margin: 4px ;
 }
