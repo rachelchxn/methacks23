@@ -1,4 +1,3 @@
-
 const apiKey = '4Iu13lorghAGuBtMJgQ19aVUHfsdtexuX3meFpLN'; // Replace with your Cohere API key
 
 async function rewordToxicText(desiredPrompt) {
