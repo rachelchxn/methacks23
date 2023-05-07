@@ -16,7 +16,6 @@ const loadModel = async () => {
   }
 };
 
-
 const identify = async (imageRef) => {
   const result = await model.classify(imageRef);
   results = result;
@@ -41,9 +40,9 @@ function blurImagesAndAddOverlay() {
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
 
-      // let show = identify(image)
+      let show = identify(image)
 
-      // if(!show) {
+      if(!show) {
         // Wrap the image with a container div
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
@@ -68,7 +67,7 @@ function blurImagesAndAddOverlay() {
         // Blur the image
         image.style.filter = "blur(8px)";
 
-      // }
+      }
     }
   }
   
