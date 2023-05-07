@@ -14,8 +14,16 @@ export const Popup = () => {
     setIsToggledImage(!isToggledImage);
   }
 
+  var r = document.querySelector(':root');
   const handleToggleText = () => {
     setIsToggledText(!isToggledText);
+    if (isToggledText == true) {
+      r.style.setProperty('--option', 'gray');
+    }
+    else {
+      r.style.setProperty('--option', 'black');
+    }
+    
   }
 
   const handleSubmit = () => {
@@ -72,7 +80,7 @@ export const Popup = () => {
       </div>
       
       <h4>Image Filter</h4>
-      <div className = "imageToggle">
+      <div className = "Toggle">
         <Toggle
           checked={isToggledImage}
           onChange={handleToggleImage}
@@ -80,7 +88,7 @@ export const Popup = () => {
         />
         </div>
         <h4>Text Filter</h4>
-        <div className = "textToggle">
+        <div className = "Toggle">
         <Toggle
           checked={isToggledText}
           onChange={handleToggleText}
