@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header>
         <img src={Logo} alt="Logo"/>
-        <h3>ZenSphere</h3>
+        <h2>ZenSphere</h2>
       </header>
       <Popup/>
       <footer>

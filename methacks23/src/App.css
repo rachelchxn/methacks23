@@ -19,13 +19,13 @@
       #bae4ff,
       #abe3ff
     );
+    display: flex;
+    padding-bottom: 10px;
   }
   
   h3 {
     color: #a634dd;
-    margin-block-start: 0em;
-    margin-block-end: em;
-    text-align: center;
+    margin: auto 15px;
   }
   
   footer {
@@ -58,7 +58,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   
     /* Add hover animation */
     transition: background 0.3s ease;
@@ -70,9 +70,9 @@
   
   img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-    width: 10%;
+    width: 30px;
   }
   
+  footer {
+    padding-bottom: 25px;
+  }
