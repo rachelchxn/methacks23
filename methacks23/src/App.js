@@ -60,8 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      </header>
-      <Popup/>
+      <Popup />
       <footer>
         <button className="submit"> Submit </button>
       </footer>
