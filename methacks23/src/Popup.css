@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 :root {
   --option: gray;
 }
 
+#root {
+  border-radius: 25px;
+}
+
 *{
-  font-family: 'Inter';
+  font-family: 'DM Sans', sans-serif;
 }
 
 .everything {
@@ -59,7 +63,7 @@
   border-radius: 5px;
   border: none;
   color: #fff;
-  font-family: Inter, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -71,29 +75,22 @@
 .reset-button {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 10px 20px;
-  margin-top: 10px;
-  width: 150px;
-  height: 30px;
+  margin-top: 15px;
   background: #F2F1FC;
   border-radius: 5px;
   border: 1px solid #fff;
   color: #000;
-  font-family: Inter, sans-serif;
   font-size: 12px;
-  margin-bottom: 0;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .reset-button:hover {
   background: #EFE6FC;
 }
 
-/* Form container */
-.form {
-  justify-content: center;
-  align-items: flex-start;
-}
 
 /* INPUT BOX --------------------------------- */
 
@@ -132,7 +129,7 @@ input::placeholder {
   align-items: flex-start;
   padding: 10px;
   gap: 10px;
-  height: 40px;
+  height: 50px;
   border: 1px solid #F2F1FC;
   border-radius: 10px;
   margin-top: 10px;
@@ -154,8 +151,13 @@ input::placeholder {
     font-size: 14px;
   }
   
-  h4 {
+  h4, h5 {
     margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  h4 {
+    margin-top: 5px;
   }
   
   /* stylish */
@@ -198,4 +200,25 @@ input::placeholder {
 
   .hide {
     display: none;
+  }
+
+  .flex-it {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 10px;
+  }
+
+  .Toggle {
+    margin-left: 10px;
+    margin-right: 75px;
+  }
+
+  .toggles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -10px;
+  }
+
+  form {
+    margin-bottom: 10px;
   }

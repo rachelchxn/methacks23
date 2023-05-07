@@ -77,24 +77,32 @@ export const Popup = () => {
 
         {/* Reset button */}
         <button className='reset-button' onClick={handleReset}>Clear Tags</button>
-      </div>
-      
-      <h4>Image Filter</h4>
-      <div className = "Toggle">
-        <Toggle
-          checked={isToggledImage}
-          onChange={handleToggleImage}
-          icons={false}
-        />
         </div>
-        <h4>Text Filter</h4>
-        <div className = "Toggle">
-        <Toggle
-          checked={isToggledText}
-          onChange={handleToggleText}
-          icons={false}
-        />
-        </div>
+        
+        <div className='toggles'>
+          
+            <div className='flex-it'>
+              <h4>Text Filter</h4>
+              <div className = "Toggle">
+              <Toggle
+                checked={isToggledText}
+                onChange={handleToggleText}
+                icons={false}
+              />
+              </div>
+              </div>
+              <div className='flex-it'>
+            <h4>Image Filter</h4>
+            <div className = "Toggle">
+              <Toggle
+                checked={isToggledImage}
+                onChange={handleToggleImage}
+                icons={false}
+              />
+              </div>
+              </div>
+            </div>
+            
         <form className='multi-div' >
           <div>
           <input className='multichoice' type="radio" name="choice" value="Scripting" disabled={!isToggledText}></input>
