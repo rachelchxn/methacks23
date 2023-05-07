@@ -1,49 +1,9 @@
-import * as mobilenet from "../node_modules/@tensorflow-models/mobilenet";
-
-let isModelLoading = false;
-let model = null;
-let results = [];
-let visible = true;
-const imageRef = document.createElement('img');
-
-const loadModel = async () => {
-  isModelLoading = true;
-  try {
-    model = await mobilenet.load();
-    isModelLoading = false;
-  } catch (error) {
-    console.log(error);
-    isModelLoading = false;
-  }
-};
-
-const identify = async (imageRef) => {
-  const result = await model.classify(imageRef);
-  results = result;
-  let includesObj = false;
-  for (let i = 0; i < results.length; i++) {
-    const result = results[i];
-    if (result.className.includes('jersey')) {
-      includesObj = true;
-      break;
-    }
-  }
-  if (includesObj) {
-    return(false)
-  } else {
-    return(true)
-  }
-};
-
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
-
-      let show = identify(image)
-
-      if(!show) {
+      
         // Wrap the image with a container div
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
@@ -66,9 +26,8 @@ function blurImagesAndAddOverlay() {
         imageContainer.appendChild(overlay);
     
         // Blur the image
-        image.style.filter = "blur(8px)";
+        image.style.filter = "blur(18px)";
 
-      }
     }
   }
   
@@ -83,17 +42,9 @@ function showImage(imageContainer) {
 
 // Entry point
 function init() {
-  //let text_filter = false;
-  //let text_filter_neutralize = false; // USES GENERATE
-  //let text_filter_block = false;
-  //let image_filter = true;
-  
-  // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
-  loadModel();
+  // loadModel();
   blurImagesAndAddOverlay();
-  // document.body.style.filter = "blur(5px)";
 }
+// Wait for the page to load
   
-  // Wait for the page to load
-  
-  window.addEventListener("load", init);
+window.addEventListener("load", init);
