@@ -106,8 +106,8 @@ function App() {
       <Popup/>
       <header className="App-header">
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <img className={!visible && 'blur'} onClick={identify} src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt='' ref={imageRef} crossOrigin='anonymous'/>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <img className={!visible && 'blur'} onClick={identify} src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt='' ref={imageRef} crossOrigin='anonymous'/> */}
         {/* <img  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' alt=''  crossOrigin='anonymous'/> */}
       </header>
     </div>
