@@ -103,12 +103,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <img src={Logo} alt="Logo"/>
         <h3>ZenSphere</h3>
       </header>
       <Popup/>
-      
+      <footer>
+        <button className="submit"> Submit </button>
+      </footer>
     </div>
   );
 }
