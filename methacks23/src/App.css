@@ -1,3 +1,9 @@
 .blur {
     border-radius: 50%;
 }
+
+header {
+    padding: 15px 50px 1px;
+    background-image: linear-gradient(to right top, #e6b5ff, #f2ddff, #f4e5ff, #f6edff, #f9f5ff, #faf7ff, #fbfaff, #fcfcff, #e1eaff, #daecff, #ceecff, #abe3ff);
+    margin-bottom: 10px;
+}

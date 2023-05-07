@@ -5,8 +5,10 @@
 }
 
 .everything {
-  padding: 50px;
+  padding: 0px 50px;;
 }
+
+
 
 /* TOGGLE BUTTON */
 .react-toggle-track {
@@ -51,7 +53,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  gap: 20px;
+  /* gap: 20px; */
 
   width: 190px;
   height: 41px;
@@ -128,7 +130,7 @@
   align-items: flex-start;
   /* padding: 10px 0px; */
   gap: 10px;
-  width: 680px;
+  /* width: 680px; */
   height: 41px;
   border-radius: 5px;
   flex: none;
@@ -166,11 +168,11 @@ input::placeholder {
 }
 
 /* style the input when it has focus */
-input:focus {
+/* input:focus {
   outline: none;
   border-color: #66afe9;
   box-shadow: 0px 2px 5px rgba(102, 175, 233, 0.5);
-}
+} */
 
 /*  TAGS */
 .tag-list {
@@ -182,7 +184,7 @@ input:focus {
   padding: 10px;
   gap: 10px;
 
-  width: 660px;
+  /* width: 660px; */
   height: 95px;
 
   border: 1px solid #F2F1FC;

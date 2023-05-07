@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
-import Logo from './logo.svg';
+// import Logo from './logo.svg';
 import './Popup.css';
 
 export const Popup = () => {
@@ -42,10 +42,6 @@ export const Popup = () => {
 
   return (
     <div className="everything">
-      <div className='header'>
-        <img src={Logo} alt="Logo"/>
-        <h3>ZenSphere</h3>
-      </div>
       
       <p1>Input keywords of the type of content you wish to filter.</p1>
 
