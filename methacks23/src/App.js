@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Logo from './logo.svg';
 import {Popup} from './Popup.js';
 import { useState, useEffect, useRef } from 'react';
 import './App.css'
@@ -39,10 +39,6 @@ const options = {
   })
 };
 
-let text_filter = false;
-let text_filter_neutralize = false; // USES GENERATE
-let text_filter_block = false;
-//let image_filter = false; UNCOMMENT WHEN USED
 
 
 function App() {
@@ -64,14 +60,11 @@ function App() {
 
   return (
     <div className="App">
-      <Popup/>
-      <header className="App-header">
-        <h1>I really like food</h1>
-        <p>I like food too</p>
-        <h2>not me</h2>
-
-        <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <Popup/>
+      <footer>
+        <button className="submit"> Submit </button>
+      </footer>
     </div>
   );
 }

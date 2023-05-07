@@ -3,7 +3,8 @@ function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
     for (let i = 0; i < images.length; i++) {
       const image = images[i];
-      
+
+
         // Wrap the image with a container div
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
