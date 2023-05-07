@@ -4,9 +4,7 @@
 
 header {
     padding: 15px 50px 1px;
-    background-image: linear-gradient(to right top, #e6b5ff, #f2ddff, #f4e5ff, #f6edff, #f9f5ff, #faf7ff, #fbfaff, #fcfcff, #e1eaff, #daecff, #ceecff, #abe3ff);
-    margin-bottom: 30px; 
-}
+    background-image: linear-gradient(to right top, #e6b5ff, #e4c0ff, #e4caff, #e5d4ff, #e7ddff, #e4e1ff, #e1e4ff, #e0e7ff, #d5e5ff, #c8e4ff, #bae4ff, #abe3ff);}
 
 h3 {
     color: #A634DD;
@@ -53,5 +51,5 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
-    width: 15%;
+    width: 10%;
   }

@@ -51,7 +51,7 @@ export const Popup = () => {
   return (
     <div className="everything">
       
-      <p1>Input keywords of the type of content you wish to filter.</p1>
+      <p>Input keywords of the type of content you wish to filter.</p>
 
       <h5>Keywords</h5>
 

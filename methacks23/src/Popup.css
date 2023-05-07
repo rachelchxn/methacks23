@@ -209,7 +209,8 @@ input::placeholder {
   font-size: 12px;
 }
 
-p1 {
+p {
+  margin-top: 20px;
   font-size: 14px;
 }
 
