@@ -1,4 +1,4 @@
-import * as mobilenet from "@tensorflow-models/mobilenet";
+import * as mobilenet from "../node_modules/@tensorflow-models/mobilenet";
 
 let isModelLoading = false;
 let model = null;
@@ -35,9 +35,6 @@ const identify = async (imageRef) => {
   }
 };
 
-// Usage:
-loadModel();
-identify();
 // Blur images and add overlay
 function blurImagesAndAddOverlay() {
     const images = document.getElementsByTagName("img");
@@ -92,9 +89,9 @@ function init() {
   //let image_filter = true;
   
   // toggle_image_filter(); // this will be the toggle that modifies the boolean var image_filter
-
+  loadModel();
   blurImagesAndAddOverlay();
-  document.body.style.filter = "blur(5px)";
+  // document.body.style.filter = "blur(5px)";
 }
   
   // Wait for the page to load

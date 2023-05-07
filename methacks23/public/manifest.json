@@ -20,5 +20,8 @@
         "content.js"
       ]
     }
+  ],
+  "background": [
+    {"type": "module"}
   ]
 }

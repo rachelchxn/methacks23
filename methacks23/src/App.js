@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import { Popup } from './Popup';
+import {Popup} from './Popup.js';
 import { useState, useEffect, useRef } from 'react';
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import './App.css'
