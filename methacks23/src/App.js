@@ -1,6 +1,10 @@
 import Logo from './logo.svg';
 import {Popup} from './Popup.js';
-import './App.css'
+import './App.css';
+
+function handleClick() {
+  alert('Button clicked!');
+}
 
 function App() {
   return (
@@ -11,7 +15,7 @@ function App() {
       </header>
       <Popup/>
       <footer>
-        <button className="submit"> Submit </button>
+        <button className="submit" onClick={handleClick}>Submit</button>
       </footer>
     </div>
   );
