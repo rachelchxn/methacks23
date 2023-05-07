@@ -99,6 +99,27 @@ function App() {
 
     runCohereApi();
     loadModel()
+
+    // SENDING A MESSAGE TO BACKEND
+    chrome.tabs && chrome.tabs.query({
+      active: true,
+      currentWindow: true
+    }, tabs => {
+      /**
+       * Sends a single message to the content script(s) in the specified tab,
+       * with an optional callback to run when a response is sent back.
+       *
+       * The runtime.onMessage event is fired in each content script running
+       * in the specified tab for the current extension.
+       */
+      chrome.tabs.sendMessage(
+        tabs[0].id || 0,
+        { type: 'GET_DOM' },
+        (response) => {
+          setTitle(response.title);
+          setHeadlines(response.headlines);
+        });
+    });
   }, []);
 
   return (
