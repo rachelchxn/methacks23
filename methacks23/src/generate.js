@@ -17,7 +17,13 @@ const options = {
   body: JSON.stringify(data)
 };
 
+arr = [];
 fetch('https://api.cohere.ai/v1/generate', options)
   .then(response => response.json())
-  .then(response => console.log(response))
+  .then(response => arr.push(response))
   .catch(err => console.error(err));
+
+while (arr.length) {
+  var tempAge = arr.pop();
+  console.log(tempAge);
+}

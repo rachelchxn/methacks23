@@ -4,9 +4,15 @@
   font-family: 'Inter';
 }
 
-a* {
+body* {
+  /* color: transparent;
+  text-shadow: 0 0 11px #ff0000; */
+}
+
+.blur {
   color: transparent;
   text-shadow: 0 0 11px #ff0000;
+
 }
 
 .image-container {
