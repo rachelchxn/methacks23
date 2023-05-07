@@ -5,12 +5,17 @@ import Logo from './logo.svg';
 import './Popup.css';
 
 export const Popup = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggledImage, setIsToggledImage] = useState(false);
+  const [isToggledText, setIsToggledText] = useState(false);
   const [tags, setTags] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
+  const handleToggleImage = () => {
+    setIsToggledImage(!isToggledImage);
+  }
+
+  const handleToggleText = () => {
+    setIsToggledText(!isToggledText);
   }
 
   const handleSubmit = () => {
@@ -67,18 +72,21 @@ export const Popup = () => {
       </div>
       
       <h4>Image Filter</h4>
+      <div className = "imageToggle">
         <Toggle
-          checked={isToggled}
-          onChange={handleToggle}
+          checked={isToggledImage}
+          onChange={handleToggleImage}
           icons={false}
         />
+        </div>
         <h4>Text Filter</h4>
+        <div className = "textToggle">
         <Toggle
-          checked={isToggled}
-          onChange={handleToggle}
+          checked={isToggledText}
+          onChange={handleToggleText}
           icons={false}
         />
-
+        </div>
     </div>
   )
 }

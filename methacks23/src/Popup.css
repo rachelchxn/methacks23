@@ -1,42 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 *{
-    font-family: 'Inter';
+  font-family: 'Inter';
 }
 
 /* TOGGLE BUTTON */
 .react-toggle-track {
-    background-color: #ddd;
-    border-radius: 25px;
-    width: 65px;
-    height: 25px;
-    padding: 2px;
-  }
+  background-color: #ddd;
+  border-radius: 25px;
+  width: 65px;
+  height: 25px;
+  padding: 2px;
+}
   
-  .react-toggle-thumb {
-    width: 21px;
-    height: 21px;
-    top: 4px;
-    left: 3px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: none;
-    box-shadow: none;
-    transition: all 0.3s ease-in-out;
-  }
+.react-toggle-thumb {
+  width: 21px;
+  height: 21px;
+  top: 4px;
+  left: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
   
-  
-  .react-toggle--checked .react-toggle-track {
-    background-color: #AF47E1;
-  }
-  
-  .react-toggle--checked .react-toggle-thumb {
-    transform: translate3d(18px, 0, 0);
-  }
-  
-  .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: #F1D4FF; /* <-- change this to the desired purple color */
-  }
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #AF47E1;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  transform: translate3d(18px, 0, 0);
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #F1D4FF; /* <-- change this to the desired purple color */
+}
 
 /* SUBMIT/RESET BUTTONS ---------------------------------------- */
 
@@ -119,89 +119,89 @@
 
 /* INSERT TEXT BOX */
 .input-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    /* padding: 10px 0px; */
-    gap: 10px;
-    width: 680px;
-    height: 41px;
-    border-radius: 5px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin-top: 10px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* padding: 10px 0px; */
+  gap: 10px;
+  width: 680px;
+  height: 41px;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-top: 10px;
+}
 
-  input {
-    /* set the font size, color, and family */
-    font-size: 14px;
-    color: #333;
-    font-family: Arial, sans-serif;
-  
-    /* add some padding and a border */
-    padding: 10px;
-    border: 0px solid #ccc;
-  
-    /* set the background color and add rounded corners */
-    background-color: #F2F1FC;
-    border-radius: 5px;
-    width: 460px;
-    height: 20px;
+input {
+  /* set the font size, color, and family */
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, sans-serif;
 
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  
-  /* style the placeholder text */
-  input::placeholder {
-    color: #999;
-  }
-  
-  /* style the input when it has focus */
-  input:focus {
-    outline: none;
-    border-color: #66afe9;
-    box-shadow: 0px 2px 5px rgba(102, 175, 233, 0.5);
-  }
-  
-  /*  TAGS */
-  .tag-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding: 10px;
-    gap: 10px;
+  /* add some padding and a border */
+  padding: 10px;
+  border: 0px solid #ccc;
 
-    width: 660px;
-    height: 95px;
+  /* set the background color and add rounded corners */
+  background-color: #F2F1FC;
+  border-radius: 5px;
+  width: 460px;
+  height: 20px;
 
-    border: 1px solid #F2F1FC;
-    border-radius: 10px;   
-    order: 2;
-    margin-top: 10px;
-    
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
 
-  }
-  
-  .tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    background-color: #F1D4FF;
-    border-radius: 5px;
-    color: #4F4F4F;
-    font-size: 12px;
-  }
+/* style the placeholder text */
+input::placeholder {
+  color: #999;
+}
+
+/* style the input when it has focus */
+input:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0px 2px 5px rgba(102, 175, 233, 0.5);
+}
+
+/*  TAGS */
+.tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 10px;
+  gap: 10px;
+
+  width: 660px;
+  height: 95px;
+
+  border: 1px solid #F2F1FC;
+  border-radius: 10px;   
+  order: 2;
+  margin-top: 10px;
   
 
-  /* stylish */
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #F1D4FF;
+  border-radius: 5px;
+  color: #4F4F4F;
+  font-size: 12px;
+}
+
+
+/* stylish */
 h5 {
     margin-bottom: 0px;
 }
